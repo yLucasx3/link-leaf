@@ -1,27 +1,27 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import "./globals.css";
+import type { Metadata } from "next";
 import { Providers } from "./providers";
+import localFont from "next/font/local";
 
-const inter = Inter({ subsets: ['latin'] })
+const linkSans = localFont({
+  src: "../../public/link-sans.woff2",
+});
 
 export const metadata: Metadata = {
-  title: 'Linkleaf',
-  description: 'description',
-}
+  title: "Linkleaf",
+  description: "description",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-      <Providers>
-          {children}
-      </Providers>
+      <body className={linkSans.className}>
+        <Providers>{children}</Providers>
       </body>
     </html>
-  )
+  );
 }

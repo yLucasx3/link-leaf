@@ -1,0 +1,42 @@
+.heading {
+  font-weight: 820;
+  letter-spacing: 0.02rem;
+  line-height: 1.05;
+  text-align: left;
+}
+
+.input-group {
+  background-color: white;
+  border-radius: 8px;
+  padding: 5px 8px;
+  outline: none;
+
+  div {
+    padding-right: 0px;
+    background-color: transparent;
+    color: rgb(30, 35, 48);
+    border: none;
+    outline: none;
+  }
+
+  input {
+    padding: 0;
+    border: none;
+    color:rgb(30, 35, 48);
+  }
+}
+
+.claim-button {
+  color: rgb(30, 35, 48);
+  background-color: rgb(233, 192, 233);
+  font-weight: 418;
+  padding: 0 60px;
+  height: 58px;
+}
+
+.button {
+  height: 62px;
+  width: 210px;
+  font-weight: 418;
+}
+
