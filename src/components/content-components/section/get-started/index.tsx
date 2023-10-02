@@ -10,13 +10,19 @@ import {
 } from "@chakra-ui/react";
 
 import "./styles.scss";
+import { CSSProperties } from "react";
 
 interface GetStartedProps {
   heading: string;
   text: string;
   color: string;
   isClaim?: boolean;
-  buttonTheme?: { textColor: string; backgroundColor: string };
+  customButton?: {
+    fontColor: string;
+    backgroundColor: string;
+    title?: string;
+    width?: CSSProperties["width"];
+  };
 }
 
 const GetStarted = ({
@@ -24,7 +30,7 @@ const GetStarted = ({
   text,
   color,
   isClaim,
-  buttonTheme,
+  customButton,
 }: GetStartedProps) => {
   return (
     <Stack spacing={5}>
@@ -59,10 +65,19 @@ const GetStarted = ({
         <Button
           className="button"
           borderRadius="full"
-          bg={buttonTheme ? buttonTheme.backgroundColor : "rgb(233, 192, 233)"}
-          color={buttonTheme ? buttonTheme.textColor : "rgb(30, 35, 48)"}
+          width={customButton?.width ? customButton?.width : "210px"}
+          bg={
+            customButton?.backgroundColor
+              ? customButton.backgroundColor
+              : "rgb(233, 192, 233)"
+          }
+          color={
+            customButton?.fontColor ? customButton.fontColor : "rgb(30, 35, 48)"
+          }
         >
-          Get started for free
+          {customButton && customButton.title
+            ? customButton.title
+            : "Get started for free"}
         </Button>
       )}
     </Stack>

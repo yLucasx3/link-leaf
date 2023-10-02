@@ -1,4 +1,5 @@
 import FamousSlider from "@/components/content-components/famous-slider";
+import FlipCard from "@/components/content-components/flip-card";
 import GotQuestions from "@/components/content-components/got-questions";
 import Navbar from "@/components/content-components/navbar";
 import Section from "@/components/content-components/section";
@@ -63,6 +64,24 @@ export default function Home() {
             />
           </Flex>
         </Section.Right>
+      </Section>
+      <Section bgColor="rgb(210, 232, 35)">
+        <Section.Left>
+          <Flex h="100%" justifyContent="center" alignItems="center">
+            <GetStarted
+              heading="Unify your content. F*ck the algorithm. Get paid."
+              text="It’s time to get your content seen. Find out how in the 2023 Creator Report."
+              color="rgb(30, 35, 48)"
+              customButton={{
+                backgroundColor: "rgb(30, 35, 48)",
+                fontColor: "white",
+                title: "Read the 2023 Creator Report",
+                width: 300,
+              }}
+            />
+          </Flex>
+        </Section.Left>
+        <Section.Right> </Section.Right>
       </Section>
       <FamousSlider />
       <GotQuestions />
