@@ -1,10 +1,10 @@
 import FamousSlider from "@/components/content-components/famous-slider";
-import FlipCard from "@/components/content-components/flip-card";
+import Footer from "@/components/content-components/footer";
 import GotQuestions from "@/components/content-components/got-questions";
 import Navbar from "@/components/content-components/navbar";
 import Section from "@/components/content-components/section";
 import GetStarted from "@/components/content-components/section/get-started";
-import { Flex } from "@chakra-ui/react";
+import { Flex, Image } from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -33,8 +33,8 @@ export default function Home() {
               heading="Create and customize your Linkleaf in minutes"
               text="Connect your TikTok, Instagram, Twitter, website, store, videos, music, podcast, events and more. It all comes together in a link in bio landing page designed to convert."
               color="rgb(80, 34, 116)"
-              buttonTheme={{
-                textColor: "white",
+              customButton={{
+                fontColor: "white",
                 backgroundColor: "rgb(80, 34, 116)",
               }}
             />
@@ -81,10 +81,21 @@ export default function Home() {
             />
           </Flex>
         </Section.Left>
-        <Section.Right> </Section.Right>
+        <Section.Right>
+          <Image
+            src="/creator-report.avif"
+            alt="Report Creator"
+            style={{
+              objectFit: "contain",
+              objectPosition: "center",
+              opacity: 1,
+            }}
+          />
+        </Section.Right>
       </Section>
       <FamousSlider />
       <GotQuestions />
+      <Footer />
     </main>
   );
 }

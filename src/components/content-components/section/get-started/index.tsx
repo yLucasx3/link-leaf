@@ -50,7 +50,12 @@ const GetStarted = ({
         <HStack width="60%">
           <InputGroup className="input-group" size="lg">
             <InputLeftAddon fontSize="medium">linkleaf.com/</InputLeftAddon>
-            <Input type="text" placeholder="your name" fontSize="medium" />
+            <Input
+              type="text"
+              placeholder="your name"
+              fontSize="medium"
+              style={{ boxShadow: "none" }}
+            />
           </InputGroup>
           <Button
             className="claim-button"

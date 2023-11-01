@@ -10,7 +10,7 @@ import FlipCard from "../flip-card";
 
 const FamousSlider = () => {
   return (
-    <Stack alignItems="center">
+    <Stack alignItems="center" padding="80px 0px">
       <Heading className="famous-heading">
         The only link in bio trusted by 40M+
       </Heading>
